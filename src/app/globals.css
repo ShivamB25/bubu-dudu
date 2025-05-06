@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@1,300&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -21,7 +19,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family will be inherited from layout.tsx (Geist Sans) */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,20 +41,13 @@ a {
   }
 }
 
-/* Reset from original - might conflict with Next.js defaults, review if needed */
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
 /* Apply font globally if desired, or scope it */
 body, html {
-    font-family: 'Bellota Text', sans-serif;
+    /* font-family will be inherited from layout.tsx (Geist Sans) */
     /* Keep Next.js width/height defaults unless specific reason to override */
     /* width: 100%; */
     /* height: 100vh; */
-    background-image: url("https://img.freepik.com/free-vector/cloud-background-vector-cute-desktop-wallpaper_53876-136885.jpg?w=826&t=st=1704789857~exp=1704790457~hmac=381926ab355f58892a476af4dd9c1b104192572bd7b1a38ac49528094d2ec6ce");
+    background-image: url("/cloud-background.jpg");
     background-size: cover;
 }
 
@@ -93,7 +84,7 @@ body, html {
     border-radius: 10px;
     width: 384px;
     height: 216px;
-    background-image: url("https://media1.tenor.com/m/2VprHA868S8AAAAC/yummy-desserts-desserts-milk-mocha.gif");
+    background-image: url("/yummy-desserts.gif");
     background-size: cover;
 }
 
@@ -106,18 +97,6 @@ body, html {
     text-shadow: 0px 3px 6px rgb(147, 77, 77);
 }
 
-#fix{ /* Target specific elements if needed, avoid generic IDs if possible */
-    margin-top: 30px;
-    border: none;
-    width: 400px;
-    height: 50px;
-    font-size: 30px;
-    border-radius: 10px;
-    background: none;
-    backdrop-filter: blur(5px);
-    border: 1px solid black;
-    font-weight: 550;
-}
 .container{
     /* display: block; /* Controlled by React state */
     width: 400px;
@@ -141,7 +120,7 @@ body, html {
     border-radius: 10px;
     width: 384px;
     height: 254px;
-    background-image: url("https://media1.tenor.com/m/UAFrdZCt29YAAAAC/milk-and-mocha-waiting-for-reply.gif");
+    background-image: url("/waiting-reply.gif");
     background-size: cover;
 }
 
@@ -171,6 +150,11 @@ body, html {
 }
 .answer:hover{
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.449);
+}
+
+.answer--fix {
+    width: 400px; /* Specific width for the fix button */
+    margin-top: 30px; /* Specific margin for the fix button */
 }
 
 /* Media Query adjustments */
@@ -211,11 +195,10 @@ body, html {
         /* background-size: cover; */
     }
 
-    #fix{
+    .answer--fix {
         margin-top: 20px; /* Adjust margin */
         width: 200px; /* Adjust size */
-        height: 45px; /* Adjust size */
-        font-size: 25px; /* Adjust font size */
+        /* Height and font-size will be inherited from .answer's media query styles */
     }
 
     .confirmation{

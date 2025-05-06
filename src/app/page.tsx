@@ -1,7 +1,7 @@
 'use client'; // Add this directive for client-side interactivity
 
 import { useState, useRef } from 'react';
-// import styles from './page.module.css'; // Removed unused import
+// import styles from './page.module.css'; // Styles in page.module.css are not currently used by this component.
 
 export default function Home() {
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -28,14 +28,7 @@ export default function Home() {
     }
   };
 
-  const handleFixDateClick = () => {
-    window.location.href = "https://wa.me/+919953165877?text=Chalo date pr chalein !!!!! ";
-  };
-
-  // Apply random position on initial render if needed, or keep it static until clicked
-  // useEffect(() => {
-  //   // Initial random position if desired
-  // }, []);
+  // Removed handleFixDateClick as the button will now be an anchor tag.
 
   return (
     <>
@@ -45,7 +38,7 @@ export default function Home() {
           <h1>Will you go on a date with me?</h1>
         </div>
         <div className="gif">
-          <div className="gifimg"></div> {/* Background image handled by CSS */}
+          <div className="gifimg" role="img" aria-label="Animated gif related to the proposal"></div> {/* Background image handled by CSS */}
         </div>
         <div className="answer-box">
           <button className="answer" id="yes" onClick={handleYesClick}>Yes!!!</button>
@@ -65,9 +58,16 @@ export default function Home() {
         <h1>Yayyyyyyyy!!! Finally</h1>
         <div className="question">
           <div className="fix-gif">
-            <div className="fix-gifimg"></div> {/* Background image handled by CSS */}
+            <div className="fix-gifimg" role="img" aria-label="Animated gif for confirmation"></div> {/* Background image handled by CSS */}
           </div>
-          <button className="answer" id="fix" onClick={handleFixDateClick}>Let&apos;s Fix a date</button>
+          <a
+            href="https://wa.me/+919953165877?text=Chalo date pr chalein !!!!! "
+            target="_blank"
+            rel="noopener noreferrer"
+            className="answer answer--fix"
+          >
+            Let's Fix a date
+          </a>
         </div>
       </div>
     </>
