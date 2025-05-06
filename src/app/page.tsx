@@ -66,7 +66,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="answer answer--fix"
           >
-            Let's Fix a date
+            Let&amp;apos;s Fix a date
           </a>
         </div>
       </div>
