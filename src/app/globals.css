@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@1,300&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Reset from original - might conflict with Next.js defaults, review if needed */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* Apply font globally if desired, or scope it */
+body, html {
+    font-family: 'Bellota Text', sans-serif;
+    /* Keep Next.js width/height defaults unless specific reason to override */
+    /* width: 100%; */
+    /* height: 100vh; */
+    background-image: url("https://img.freepik.com/free-vector/cloud-background-vector-cute-desktop-wallpaper_53876-136885.jpg?w=826&t=st=1704789857~exp=1704790457~hmac=381926ab355f58892a476af4dd9c1b104192572bd7b1a38ac49528094d2ec6ce");
+    background-size: cover;
+}
+
+.confirmation{
+    display: none; /* Controlled by React state now */
+    width: 400px;
+    /* Consider using relative units or responsive design techniques */
+    /* height: 500px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    /* padding-top: 50px; */
+}
+
+.confirmation h1{
+    font-style: bolder;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 0px 3px 6px rgb(147, 77, 77);
+    line-height: 90px;
+}
+
+.fix-gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 200px;
+}
+
+.fix-gifimg{
+    border-radius: 10px;
+    width: 384px;
+    height: 216px;
+    background-image: url("https://media1.tenor.com/m/2VprHA868S8AAAAC/yummy-desserts-desserts-milk-mocha.gif");
+    background-size: cover;
+}
+
+.container h1{
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-style: bolder;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 0px 3px 6px rgb(147, 77, 77);
+}
+
+#fix{ /* Target specific elements if needed, avoid generic IDs if possible */
+    margin-top: 30px;
+    border: none;
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+    background: none;
+    backdrop-filter: blur(5px);
+    border: 1px solid black;
+    font-weight: 550;
+}
+.container{
+    /* display: block; /* Controlled by React state */
+    width: 400px;
+    /* height: 500px; */ /* Let content determine height */
+    position: absolute; /* Consider relative positioning within the page flow */
+    left: 50%;
+    top: 40%; /* Adjust as needed */
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 300px;
+}
+
+.gifimg{
+    border-radius: 10px;
+    width: 384px;
+    height: 254px;
+    background-image: url("https://media1.tenor.com/m/UAFrdZCt29YAAAAC/milk-and-mocha-waiting-for-reply.gif");
+    background-size: cover;
+}
+
+.answer-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    height: 80px;
+    gap: 50px;
+    position: relative; /* Added for absolute positioning of 'No' button */
+}
+
+.answer{
+    border: none;
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+    background: none;
+    backdrop-filter: blur(5px);
+    border: 1px solid black;
+    font-weight: 550;
+    cursor: pointer; /* Add pointer cursor */
+}
+.answer:hover{
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.449);
+}
+
+/* Media Query adjustments */
+@media screen and (max-width: 600px){
+    .container{
+        width: 90%; /* Use percentage for better responsiveness */
+        top: 50%; /* Center vertically */
+    }
+    .container h1{
+        margin-top: 20px;
+        padding: 8px;
+        font-size: 30px; /* Slightly smaller */
+    }
+    .answer{
+        font-size: 20px;
+        padding: 5px;
+        width: 80px; /* Adjust size */
+    }
+    .gif{
+        height: 200px; /* Adjust height */
+    }
+    .gifimg{
+        border-radius: 10px;
+        width: 250px; /* Adjust size */
+        height: 165px; /* Adjust size */
+        /* background-image: url("https://media1.tenor.com/m/UAFrdZCt29YAAAAC/milk-and-mocha-waiting-for-reply.gif"); */
+        /* background-size: cover; */
+    }
+    .fix-gif{
+        height: 180px; /* Adjust height */
+    }
+
+    .fix-gifimg{
+        border-radius: 10px;
+        width: 250px; /* Adjust size */
+        height: 140px; /* Adjust size */
+        /* background-image: url("https://media1.tenor.com/m/2VprHA868S8AAAAC/yummy-desserts-desserts-milk-mocha.gif"); */
+        /* background-size: cover; */
+    }
+
+    #fix{
+        margin-top: 20px; /* Adjust margin */
+        width: 200px; /* Adjust size */
+        height: 45px; /* Adjust size */
+        font-size: 25px; /* Adjust font size */
+    }
+
+    .confirmation{
+        width: 90%; /* Use percentage */
+    }
+
+    .confirmation h1 {
+        font-size: 35px; /* Adjust font size */
+        line-height: normal; /* Adjust line height */
+    }
+
+    .answer-box {
+        gap: 20px; /* Reduce gap */
+    }
+}

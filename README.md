@@ -1,27 +1,36 @@
-# Asking for a Date with a crush using an automated message sent on WhatsApp 💘
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This is a repo for making a Website using HTML, CSS, and JavaScript that allows users to ask their crush for a Date! and a custom message is sent to your crush automatically using JavaScript.
+## Getting Started
 
-# Disclaimer ⚠️
-We cannot guarantee that this landing page will result in a successful date or relationship. Use at your own risk (but hey, at least you tried, right?).
+First, run the development server:
 
-## Installation
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Download the Date folder in your system and open the Date.html file in your browser
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Configurations to the code
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Open the Date.html file in VScode and enter your own number in the code otherwise it will direct your crush's message to me x)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-![Date6](https://github.com/Ganesh-Sharmaz/Date/assets/151487165/6072ce08-9e9a-4d60-8adc-1eb5e86ac17c)
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
-## How it looks
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-![Date1](https://github.com/Ganesh-Sharmaz/Date/assets/151487165/4547e047-7f0c-48df-be03-73caa61a07b2)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-![Date2](https://github.com/Ganesh-Sharmaz/Date/assets/151487165/bb595cc7-09ac-4591-889c-649a6a87b568)
+## Deploy on Vercel
 
-![Date3](https://github.com/Ganesh-Sharmaz/Date/assets/151487165/b42335c2-eefd-46db-958a-a0deea2550be)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
