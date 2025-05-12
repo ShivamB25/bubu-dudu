@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Interactive Date Proposal App
+
+A fun, interactive web application built with Next.js that presents a creative way to ask someone out on a date. Features include:
+
+- Animated "No" button that escapes when the user tries to click it
+- Confetti celebration when the user clicks "Yes"
+- WhatsApp integration to plan the date
+- Responsive design for all device sizes
+- Loading animations and smooth transitions
+
+![Date Proposal Demo](https://media1.tenor.com/m/UAFrdZCt29YAAAAC/milk-and-mocha-waiting-for-reply.gif)
+
+## Technologies Used
+
+- **Next.js 15** with App Router
+- **React 19** with Hooks
+- **TypeScript** for type safety
+- **CSS** with responsive design
+- **Canvas Confetti** for celebration effects
+- **Vercel Speed Insights** for performance monitoring
+- **Geist Font** for modern typography
+
+## Project Structure
+
+- `src/app` - Next.js app router files
+- `src/components` - React components
+  - `ui/` - Reusable UI components
+  - `DateProposal.tsx` - Main date proposal component
+- `src/hooks` - Custom React hooks
+  - `useEscapingButton.ts` - Logic for the escaping button
+  - `useConfetti.ts` - Confetti animation trigger
+- `public` - Static assets including GIFs and backgrounds
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
 
 ```bash
+# With npm
+npm install
+
+# Or with Yarn
+yarn 
+
+# Or with bun
+bun install
+```
+
+Then, run the development server:
+
+```bash
+# With npm
 npm run dev
-# or
+
+# Or with Yarn
 yarn dev
-# or
-pnpm dev
-# or
+
+# Or with bun
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Escaping "No" Button
+When a user tries to click "No", the button moves to a random position on the screen, making it difficult (but not impossible) to decline.
 
-## Learn More
+### Confetti Celebration
+When the user clicks "Yes", a multi-stage confetti animation celebrates the acceptance.
 
-To learn more about Next.js, take a look at the following resources:
+### WhatsApp Integration
+After accepting, users can directly click to start a WhatsApp conversation to plan the date.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can customize the application by:
+- Changing the GIFs in the `/public` folder
+- Modifying the text in `DateProposal.tsx`
+- Adjusting the WhatsApp message in the component
+- Updating colors and styling in `globals.css`
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy this app is using [Vercel](https://vercel.com/new).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is open source and available for personal use.
